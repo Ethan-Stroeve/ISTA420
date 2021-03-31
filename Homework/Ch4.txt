@@ -1,0 +1,27 @@
+1) a subquery is a query within a query. It can be self contained or correlated.
+
+2) self conatined does not rely on any tables from other(outer) queries and can run by itself. runs once.
+
+3) a query that relies on tables from a different(outer) query. also can't run by itself. runs once for each row.
+
+4) a scalar subquery returns a single value. can be used to find highest value item store sells
+declare @maxprice as INT = (select max(itemprice) from products);
+select itemprice, itemtype itemname from products where item price = @maxprice;
+declared statement can be substituted in where statement. 
+
+5) a multivalued subquery returns multiple values. can be used to find how many people have the same name
+select custorder from orderdetails where custid in (select c.custid from c.customers as c where c.contactname like n&'T%'); 
+
+6) a correlated subquery returns values from differnt table. you would use this when you need to get data from two seperate tables.
+selec custid, orderid from sales.orders as 01 where oderid = (select max(02.orderid) from sales.orders as 02 where 02.custid = 01.custid);
+
+7) Exist predicate returns true if the subquery returns any rows and false if it does not.
+select custid from sale.customer as c where country = n'argentina' and exists (select * from sales.orders as o where o.custid = c.custid
+
+8) if you use not before a predicate it negates that predicate
+
+9) when using exists or not exists it will return two valuse becasues there there eithier is a row or there is not it would never be unknown
+
+10) to use a subquery to calculate aggregates you would have two values one is your running value(summed) and the second is the current value
+select orderyear, qty, (select sum(02.qty) from sales.orderototalbyyear as 02 where 02.orderyear <= 01.orderyear) as
+runqty from sales.orderototalbyyear as 01 order by orderyear;

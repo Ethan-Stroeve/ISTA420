@@ -1,0 +1,25 @@
+1) set operators are operators the combine rows from two query result sets.
+
+2) a set operator must produce results with the same number of columns, must have compatible data types.
+
+3) a venn diagram show the relationship and differnce of two sets by overlaping circles.
+
+4) union operator combines all parts of the two input queries but excludes will filter out duplicatres and
+may filter out attributes.
+
+5) union all operator combines all parts of two inputs queries including duplicates.
+
+6) intersect operator keeps the rows that are common to all queries.
+
+7) interssect all operator returns all common rows including common rows that are duplicates.
+
+8) except operator returns the rows in the first query input that are not in the second  query.
+
+9) except all is the same as except but will take into account duplicates and return rows if there is more
+in the first query input then the second.
+
+10) the precedence of set operator is intersect followed by union and execpt, union and execpt are evaluted based
+order of apperance.
+
+11) to get results from two sets without shared values you would do
+(A union B) except (a intersect b) // (a except b) union (b except a)

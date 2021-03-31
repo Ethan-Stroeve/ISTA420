@@ -1,0 +1,37 @@
+1. A data type is an attribute that specifies the type of data that the object can hold, define the 
+type of value that can be stored in a table column. (defines binary value type)
+
+2. property of character data that encapsulates several aspects. Collations also determine the 
+rules that sort and compare data. language support, sort order, case sensitivity, accent sensitivity./*/
+
+3.R/L TRIM() function
+
+4. select *
+From college where college_name LIKE '%insttitute%';
+
+5.CHARINDEX(substring, string[,start_postion]) onstr(x,y)-sqlite equivlent
+
+6.substring(string, strart, length) substr(x,y,z)-sqlite quivlent
+
+7.NOT, AND, BETWEEN(IN, LIKE, OR), =(ASSIGNMENT)
+
+8. (), *, + - (= < > <> comparsion operator)
+
+9. simple is based on literal value, search is based on a expression
+
+10.select substr('lastname, firstname', instr('lastname, firstname', ' ')+1);
+substr('lastname, firstname', instr('lastname, firstname', ' ')+1) || ' ' || 'substr('lastname, firstname', 1, 
+instr('lastname, firstname', ',')-1);
+
+11.select substr('first last', instr('first last', ' ')+1) || ',' || substr('first last', 1, instr('first last', ' '));
+
+--scalar value can be replaced by function returning a single(scalar) value
+-- expression evalutes to a value
+
+select 'Ethan' || '
+' || 'M' || '
+' || 'Stroeve';
+
+ascend descen limit 1
+select 10 ||  ' ' || 12
+avg(x)

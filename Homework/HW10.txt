@@ -1,0 +1,53 @@
+## T-SQL HW10
+
+1. What is the purpose of transactions? Why do we use transactions in SQL scripts?
+
+* A transaction is a unit of work that might include multiple activities that query and modify data and that can also change the data definition.
+
+2. Briefly describe each of the ACID properties.
+
+* Atomicity--Either all changes in the transaction take place or none do.
+* Consistency--Refers to the state of the data that the relational database management system (RDBMS) gives you access to as concurrent transactions modify and query it.
+* Isolation--Ensures that transactions access only consistent data.
+* Durability--After the commit instruction is recorded in the transaction log on disk, the transaction is considered durable even if the change hasn’t yet made it to the data portion on disk.
+
+3. What do we mean when we talk about the granularity of locks?
+
+* Granularity is the level of detail at which data are stored in a database.
+
+4. What do we mean when we talk about the modes of locks?
+
+* Referes to the different types of resource locks that can be applied to SQL transactions
+* Exclusive
+* Shared
+* Intent Exclusive
+* Intent Shared
+
+5. In your own words, describe blocking, and give an example.
+
+* SQL Server, blocking occurs when one session holds a lock on a specific resource and a second SPID attempts to acquire a conflicting lock type on the same resource.
+* A SPID holds locks on a set of resources for an extended period of time before releasing them. This type of blocking resolves itself over time but can cause performance degradation.
+
+6. What are the properties of locks? That is, list the column name and column type of the fields in sys.dm tran locks.
+
+* 
+
+7. What are the properties of sessions? That is, list the column name and column type of the fields in sys.dm exec connections.
+
+* 
+
+8. What are the requests of sessions? That is, list the column name and column type of the fields in sys.dm exec requests.
+
+* 
+
+9. What is an isolation level? Give an example of the operation of an isolation level.
+
+* 
+
+10. (Not in the book.) What do we mean when we say that an object is serializable?
+
+* 
+
+11. What is an deadlock? Give an example of a deadlock?
+
+* 

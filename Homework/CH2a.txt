@@ -1,0 +1,11 @@
+1. From, Where, Group by, Having, Select, Order By.
+1. Where you specify the name of the table you want to query. (getting all the rows)
+1. Provides a logical expression to filter the rows returned, anything evaluated to true are returned.
+1. Arranges rows returned by previous logical query processing phase. groups are determined by elements you specify. *groups rows that have same value
+1. Is a group filter only groups for which having predicate return true are returened.
+1. Where you specify the attributes(columns) you want to return in the result table of the query.
+1. returns the number of unique(distinct) qty of specified object.
+1. used to sort rows in the output for presentation purposes. last clause proscessed.
+1. is used to set a upper limit on the number of tuples(set of sets) returned by SQL. 
+1. is a proprietary T-SQL feature you can use to limit the number or percentage of rows your query returns. (percent can be used to return percentage of results can be used with ties to list)
+1. is like top but with a skipping filter is extentsion to order by. must have order by clause to be used. can use offset without fetch but not vice versa.

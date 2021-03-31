@@ -1,0 +1,26 @@
+1) when using insert the list of columns is not necessary, because the order of columns in the create table works
+
+2) when using insert select you do use a subquery. 
+
+3) Insert Exec
+INSERT...SELECT • INSERT...EXECUTE • WITH common table expression • TOP • OFFSET FETCH
+
+4) you can use insert into to efficiently transfer a large number of rows from one table, to another table.
+insert into etc from etc.
+
+5) the parameters for the bulk insert statement is to specify the target taqble, the source file, and options.
+
+6) no identity does not ggurantee Uniqueness, 
+it must be enforced by using a PRIMARY KEY or UNIQUE constraint or UNIQUE index
+
+7) create sequence command, can indicate type with <type>
+
+8) generatre then insert statement
+
+9) ALTER SEQUENCE [schema_name. ] sequence_name 
+
+10) for delete you use the where clause and anything evaluated to true is deleted.
+truncate has no filter and deletes all rows from a table.
+
+11) the differnce between delete and drop table is that DELETE Command, removes some or all tuples/records from a relation/table
+where as DROP Command, removes named elements of schema like relations/table, constraints or entire schema.

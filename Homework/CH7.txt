@@ -1,0 +1,31 @@
+1) A windows function takes a subset of the rows as input and transforms that input into a scalar value 
+for each row in the data set (calculation against set and returns single value)
+
+2) Partition is a process of dividing very large tables into small manageable parts or partitions, 
+such that each part has its own name and storage characteristics.
+
+3) order by defines ordering and sorts the result-set (orders the partitions)
+
+4) rows between filters a frame or a subset between two specified delimiters(a value range)
+
+5) ranking window function is used to rank each row with respect to others in the window. 
+You would use it to keep track of row numbers and can sort with consideration to the values in each row.
+
+6) offset window function allows you to return data from other rows based on their distance away from the current row.
+you would use this if you need multiple results from rows but had to filter out results inbetween.
+
+7) lag and lead does the same as the window function. lag look before the current row and lead looks after.
+
+8) First_value and Last_value is used to return the first and last rows within the window frame.
+
+9) Aggregate Window Functions operate on a set of rows and return a single value for each row from the underlying query
+
+10) pivot table is a set of data that is transformed from a collection of separate rows to a collection of columns.
+
+11) the power set of a set S is the set of all subsets of S, including the empty set and S itself. 
+
+ 
+12) A bit array is a array data structure that compactly stores bits. 
+grouping_ID() returns a bitmap
+
+13) chmod 755 would give permissions to myscript.sql the owner would have all rights abd group/others would haave all except write.

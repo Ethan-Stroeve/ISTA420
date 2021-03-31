@@ -1,0 +1,29 @@
+1) A table expression is a named query expression that represents a valid relational table.
+ is a temporary named result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement.
+
+2) derived tables are located in the from clause of an outer query.
+
+3) you can refer to column aliases in the outer query that was defined in the inner query because subquerys are
+executed before anything else..
+
+4) with statement.
+
+5) yes
+
+6) yes
+
+7) view is durable becuase the data that creates the view is saved.
+
+8) The check option is used to prevent modifications through the view that conflict with the views filters.
+This is important because you can be altering the data but unable to return the results due to the filters.
+
+9) schemabinding binds the schema of referenced objects and columns to the schema of the referencing object. 
+this is important to avoid errors from refrencing columns or objects that do not exist.
+
+10) Table valued functions are reusable table expressions that support input parameters. Is a named block of code 
+that returns a table value.
+
+11) the apply operator produces a result table with the unified results from the left and right tables.
+immplements onne or two logical query processing.
+
+12) cross apply returns rows only from the outer table and outer apply returns eturns both rows that produce a result set

@@ -1,0 +1,17 @@
+1) when you have data thats related but in seperated tables.
+
+2) applies a cartesian product(multiplied together) and Macthes rows that share a common ID/Primary key.                                                                                                                                          
+
+3) outer join would be connecting rows that dont match. also connecting tables by a common field.
+
+4) results in a combination of the two rows called.
+
+5) inner join-O, left and right outer join-hi, cross-join-O
+
+6) used to combine columns that are not unique to create a unique value/primary key. matches multiple attribute from each side.
+
+7)first query includes the rsults that return null since Count(*) is used the second query returns
+the number of orderid from sales.custromer
+
+8) the where clause can be causing the Ccustid to be filtered out since the outer join is consiudered unkown
+and where filters out unkowns.                                                                                                                                                    

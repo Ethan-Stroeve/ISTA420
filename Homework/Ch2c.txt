@@ -1,0 +1,25 @@
+1)DATETIME, SMALLDATETIME, DATE, TIME, DATETIME2, DATETIMEOFFSET
+
+2) Specify a literal of a different data (like character strings) type that can be converted.
+
+3) Determines how sql server interprets the literals you enter( can have us/british etc)
+
+4)set language german:
+SELECT cast('02/12/16' as date);  select Parse (date as DT using en german)
+
+5) cast is standard, convert and parse are not but can use style number or culture
+
+6)GETDATE/CURRENT_TIMESTAMP 
+
+7) select DATEADD(day, 1, '20210124'); select DATEADD(week, 1, '20210124'); select DATEADD(month, 1, '20210124');
+select DATEADD(yy, 1, '20210124');
+
+8) SELECT DateDIFF(year, '19980827', '20210124');
+
+9)ISDATE
+
+10) gets the last day of the month. if you want to stop collecting data at the end of the month
+
+11)select DATEADD(day, 30, 'Paymentday');
+
+12)select datediff(dd, 'CURRENT_TIMESTAMP', '20250520');

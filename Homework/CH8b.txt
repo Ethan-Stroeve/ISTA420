@@ -1,0 +1,56 @@
+1) To update a sales tax rate I would do 
+update Tax.Detail set Rate += 0.03 where state = Texas
+
+2)select unnitprice, totalprice * taxrate as salestax from orderdetails
+
+3) the proprietary assignment update command works by updating data in a table and assigning values to variables.
+
+4) one important part that MERGE in SQL does is merge data from a source into a target while applying different actions
+Etl (extract transform load)is a type of data intergation (moving data to new systems) 
+
+5) semantics of Merge is you specify the target table name in the merge clause and the souce table name in the using clause
+you define a merge condition by specifing the predicate in the on clause. you define the action taken when a match is found
+in a clause called when macthed then and the action taken when not macthed using not macthed then.
+
+6) insert into dbo.orders
+	output inserted.OrderId, inserted.ProductItem
+	select ProductName
+	from od.orderdetails
+	where manufactured = N'USA';
+
+7) Update dbo.Sales
+	set price += 10.05
+	output
+	inserted.productID, inserted.ProductName, deleted.Price as oldprice, inserted.price as new price
+	where productid = 10;
+
+8) Delete from dbo.sales
+	output
+	deleted.SaleId, deleted.saledate, deleted.price, deleted.Empid
+	where saledate > '20190312';
+
+9) Merge Into dbo.Employees as E
+	using dbo.EmployeeDetail as ED
+	on E.empid = ED.empid
+	when matched then 
+	update set
+	e.companyname = ed.companyname
+	etc = etc
+	when not macthed then
+	insert(empid, companyname, etc)
+	values (ed.empid, ed.companyname, etc)
+	output inserted.empid, deleted.empid etc
+
+10) nested DML lets you directly insert into the final target table only the subset of rows you need from the full set of modified rows.
+
+11) alter table person
+	add column DayOfBirth sting 'abcd...'
+
+12) Alter Table
+	add Constraint day = mon
+
+13) create table week (
+	add constraint day 
+	foreign key (year)
+	references ValidDay
+	

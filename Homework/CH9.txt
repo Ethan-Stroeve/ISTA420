@@ -1,0 +1,23 @@
+1) temporal tables is a built in feature to define current and historical data for every row in a table
+The two period columns which are of datetime2 data type, SysStartTime and SysEndTime define the current 
+and historical data for every row of the table. 
+
+2) Temporal tables can be used in audits or anythin
+
+3) the semantics of a temporal table are a primary key, two columns defined as DATETIME2, a start column, an end column, 
+designation of the period columns, the table option SYSTEM_versioning, and a linked history table
+
+4) you search a history table by quering it in the same way you would any other table just specifying FOR SYSTEM_TIME
+
+5) To modify the history table you can delete data to have it inserted into history
+
+6)  to delete data from the history table run delete from example where empid = 10, you may delete data from a history
+table if you no longer carry a product and the history is no longer relavent or to hide from auditors.
+
+7) To query all data from a current table you just run code normally (select * from etc )but to query a history
+table use the FOR SYSTEM_Time and a sub clause that indicates the validity point or period of time you wish to return.
+select ... from <table_or_view> for System_Time <subclause> as <alias> 
+
+8) to return all data from history and current you can use the all keyword like so.
+SELECT *
+FROM   dbo.People FOR SYSTEM_TIME ALL;
